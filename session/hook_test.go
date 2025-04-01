@@ -20,6 +20,7 @@ func (account *Account) BeforeInsert(s *Session) error {
 func (account *Account) AfterQuery(s *Session) error {
 	log.Info("after query", account)
 	account.Password = "******"
+	log.Info("after query password", account)
 	return nil
 }
 
